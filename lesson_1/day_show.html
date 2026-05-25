@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+      const now = new Date();
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      
+const year = now.getFullYear();
+const date = now.getDate();
+const month = months[now.getMonth()];
+const day = days[now.getDay()];
+
+
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let ampm = hours >= 12 ? "PM" : "AM";
+
+hours = hours % 12;
+hours = hours ? hours : 12; 
+minutes = minutes < 10 ? "0" + minutes : minutes;
+const result = `${year} ${date} ${month} ${hours}:${minutes} ${ampm} ${day}`;
+
+      const div = (
+        <div>
+          <p>Today is : {result}</p>
+        </div>
+      );
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>

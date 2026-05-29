@@ -1,10 +1,10 @@
 {
-  "name": "state_sharing",
+  "name": "form-handling",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "shanto": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

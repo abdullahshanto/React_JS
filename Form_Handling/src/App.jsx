@@ -1,4 +1,6 @@
-import { Multi_input_form } from "./component/multi_input_form"
+// import { Multi_input_form } from "./component/multi_input_form"
+
+import Advanced_form from "./component/advanced_form"
 
 
 function App(){
@@ -6,9 +8,10 @@ function App(){
     
     <>
       {/*< SimpleForm />*/}
-      < Multi_input_form />
+      {/* < Multi_input_form /> */}
+    <Advanced_form />
     </>
   )
 }
 
-export default App
+export default App 

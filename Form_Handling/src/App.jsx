@@ -1,6 +1,8 @@
 // import { Multi_input_form } from "./component/multi_input_form"
 
-import Advanced_form from "./component/advanced_form"
+import UncontrolledForm from "./component/uncomtrolled_input"
+
+// import Advanced_form from "./component/advanced_form"
 
 
 function App(){
@@ -9,7 +11,8 @@ function App(){
     <>
       {/*< SimpleForm />*/}
       {/* < Multi_input_form /> */}
-    <Advanced_form />
+    {/* <Advanced_form /> */}
+    <UncontrolledForm />
     </>
   )
 }

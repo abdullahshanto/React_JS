@@ -1,0 +1,36 @@
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  height: 600px;
+  width: 700px;
+  background-color: rgb(50, 168, 117);
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;   
+  
+  justify-content: center;
+  align-items: center;
+  gap: 20px;              
+}
+h3{
+  text-align: center;
+  font-size: 40px;
+}
+h4{
+  font-size: 50px;
+  border: 2px solid white;
+  border-radius: 3px;
+  background-color: rgb(120, 207, 198);
+}
+
+.main button{
+  display: block;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+}

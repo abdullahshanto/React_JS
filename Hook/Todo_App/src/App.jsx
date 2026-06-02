@@ -34,7 +34,7 @@ function App() {
   }
 
   return (
-    <div class="main">
+    <div className="main">
       <h1>Todo App</h1>
 
       <input
@@ -57,8 +57,7 @@ function App() {
 
               {todo}
 
-              <button class = "del" 
-              onClick={() => deleteTodo(index)}>
+              <button className="del" onClick={() => deleteTodo(index)}>
                 Delete
               </button>
 

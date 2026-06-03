@@ -1,9 +1,15 @@
-import withAuth from "./HOC/withAuth";
-import Dashboard from "./dashboard";
+// import withAuth from "./HOC/withAuth";
+// import Dashboard from "./dashboard";
+import withLoading from "./HOC/withLoading";
+import Products from "./components/Products";
 
-const DashboardWithAuth = withAuth(Dashboard);
+const ProductWithLoading = withLoading(Products);
+
+//const DashboardWithAuth = withAuth(Dashboard);
 
 function App(){
-  return <DashboardWithAuth />
+  // return <DashboardWithAuth />
+  return <ProductWithLoading loading={true} />
+
 }
 export default App;

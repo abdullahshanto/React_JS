@@ -12,7 +12,7 @@ function Users() {
       <h1>Users Name</h1>
       {data.map((user) => (
         <li key={user.id}>
-          {user.name} 
+          {user.name } 
         </li>
       ))}
     </ul>

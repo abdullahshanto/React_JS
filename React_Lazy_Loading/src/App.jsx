@@ -1,8 +1,14 @@
-import { Post } from "./Components/All_posts";
+import { lazy, Suspense } from "react";
+
+const Post = lazy(() =>
+  import("./Components/All_posts").then((module) => ({ default: module.Post }))
+);
 
 function App(){
   return(
-    < Post />
+    <Suspense fallback={<p>Loading posts...</p>}>
+      <Post />
+    </Suspense>
   )
 }
 

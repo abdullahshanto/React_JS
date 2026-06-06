@@ -5,7 +5,8 @@ export default function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <nav>
-        <Link to="profile">Profile</Link> | <Link to="settings">Settings</Link>
+        <Link to="profile">Profile</Link> <br />
+        <Link to="settings">Settings</Link>
       </nav>
       <hr />
       <Outlet />

@@ -13,8 +13,16 @@ function App() {
    
    
 
-       <ErrorBoundary> <Userdata user={user} /></ErrorBoundary>
-       <ErrorBoundary> <Userdata user={user2} /></ErrorBoundary>
+       <ErrorBoundary fallback={ <p>
+        error in user 1 profile
+       </p>}> 
+        <Userdata user={user} />
+        </ErrorBoundary>
+       <ErrorBoundary fallback={ <p>
+        error in user 1 profile
+       </p>}> 
+        <Userdata user={user2} />
+        </ErrorBoundary>
     </>
   );
 }

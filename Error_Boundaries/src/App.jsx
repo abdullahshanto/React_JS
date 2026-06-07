@@ -1,3 +1,4 @@
+import ErrorBoundary from "./componenets/error.jsx";
 import Userdata from "./componenets/userData.jsx";
 
 function App() {
@@ -9,8 +10,11 @@ function App() {
 
   return (
     <>
-      <Userdata user={user} />
-       <Userdata user={user2} />
+   
+   
+
+       <ErrorBoundary> <Userdata user={user} /></ErrorBoundary>
+       <ErrorBoundary> <Userdata user={user2} /></ErrorBoundary>
     </>
   );
 }

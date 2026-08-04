@@ -1,6 +1,8 @@
 
 import hero_img from "../../assets/bg0.gif";
 import { category } from "../../catagory";
+import { dummyData } from "../../dummydata";
+import Product from "../../components/product/product";
 import "./home.css";
 
 
@@ -33,6 +35,28 @@ function Home(){
         }
        </div>
      </div>
+
+      <div className="trending-section">
+        <h2>Trending Products</h2>
+        <p className="subheading">Handpicked for you</p>
+        <div className="product-section">
+          {
+            dummyData.map((item) => {
+              return (
+                <Product 
+                  key={item.id}
+                  name={item.name}
+                  image={item.image}
+                  price={item.price}
+                  id={item.id}
+                />
+              );
+            })
+          }
+        </div>
+      </div>
+
+
 
     </div>
   )

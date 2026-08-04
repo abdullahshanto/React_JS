@@ -1,0 +1,144 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  min-width: 180px;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  font-size: 20px;
+}
+
+.brand-name {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.logo small {
+  display: block;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 560px;
+  height: 46px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #f8fafc;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.search-box input::placeholder {
+  color: #cbd5e1;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.cart-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px 16px;
+  flex-wrap: wrap;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #e2e8f0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  font-size: 0.92rem;
+}
+
+.bottom-nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    justify-content: center;
+    min-width: auto;
+  }
+
+  .search-box {
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+}
+

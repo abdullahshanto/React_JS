@@ -28,6 +28,7 @@ export const dummyData = [
     name: "Premium Smartphone",
     image: smartphone,
     price: 799.99,
+    category: "Electronics",
     description: "6.7\" OLED display, 128GB storage, 5G capable smartphone with an ultra-wide camera system."
   },
   {
@@ -35,6 +36,7 @@ export const dummyData = [
     name: "Stainless Steel Watch",
     image: image1,
     price: 249.99,
+    category: "Electronics",
     description: "Water-resistant smartwatch with heart rate monitor and adjustable leather strap."
   },
   {
@@ -42,6 +44,7 @@ export const dummyData = [
     name: "Wireless Headphones",
     image: image2,
     price: 159.5,
+    category: "Electronics",
     description: "Noise-cancelling over-ear headphones with 30-hour battery life and premium sound."
   },
   {
@@ -49,6 +52,7 @@ export const dummyData = [
     name: "Gaming Laptop",
     image: image3,
     price: 1599.0,
+    category: "Electronics",
     description: "15.6\" 144Hz gaming laptop with RTX 4060, 16GB RAM and 1TB SSD for high performance."
   },
   {
@@ -56,6 +60,7 @@ export const dummyData = [
     name: "DSLR Camera",
     image: image4,
     price: 899.99,
+    category: "Electronics",
     description: "24.1MP full-frame DSLR camera kit with 18-55mm lens and 4K video recording."
   },
   {
@@ -63,6 +68,7 @@ export const dummyData = [
     name: "Running Shoes",
     image: image5,
     price: 119.0,
+    category: "Fashion",
     description: "Lightweight breathable running shoes with responsive cushioning and anti-slip sole."
   },
   {
@@ -70,6 +76,7 @@ export const dummyData = [
     name: "Leather Handbag",
     image: image6,
     price: 99.95,
+    category: "Fashion",
     description: "Genuine leather handbag with multiple interior pockets and a detachable shoulder strap."
   },
   {
@@ -77,6 +84,7 @@ export const dummyData = [
     name: "Mechanical Keyboard",
     image: image7,
     price: 79.99,
+    category: "Electronics",
     description: "RGB backlit mechanical gaming keyboard with cherry switches and aluminum frame."
   },
   {
@@ -84,6 +92,7 @@ export const dummyData = [
     name: "Yoga Mat",
     image: image8,
     price: 39.99,
+    category: "Beauty",
     description: "Non-slip eco-friendly TPE yoga mat with carrying strap, 6mm thick for comfort."
   },
   {
@@ -91,6 +100,7 @@ export const dummyData = [
     name: "Sunglasses",
     image: image9,
     price: 129.0,
+    category: "Fashion",
     description: "Polarized UV400 sunglasses with bamboo frame and foldable case included."
   },
   {
@@ -98,6 +108,7 @@ export const dummyData = [
     name: "Bluetooth Speaker",
     image: image10,
     price: 64.5,
+    category: "Electronics",
     description: "Portable waterproof Bluetooth speaker with 12-hour playtime and rich bass."
   },
   {
@@ -105,6 +116,7 @@ export const dummyData = [
     name: "Coffee Maker",
     image: image11,
     price: 74.99,
+    category: "Home & Kitchen",
     description: "Programmable drip coffee maker with auto-shutoff, 12-cup glass carafe."
   },
   {
@@ -112,6 +124,7 @@ export const dummyData = [
     name: "Smart Bulb",
     image: image12,
     price: 24.99,
+    category: "Electronics",
     description: "WiFi-enabled color-changing smart LED bulb, dimmable with app and voice control."
   },
   {
@@ -119,6 +132,7 @@ export const dummyData = [
     name: "Standing Desk",
     image: image13,
     price: 329.0,
+    category: "Home & Kitchen",
     description: "Adjustable height electric standing desk with memory presets and cable management."
   },
   {
@@ -126,6 +140,7 @@ export const dummyData = [
     name: "Air Purifier",
     image: image14,
     price: 149.5,
+    category: "Home & Kitchen",
     description: "HEPA air purifier for medium rooms, removes 99.97% of particles, quiet operation."
   },
   {
@@ -133,6 +148,7 @@ export const dummyData = [
     name: "Fitness Tracker",
     image: image15,
     price: 89.0,
+    category: "Beauty",
     description: "Waterproof fitness tracker with sleep monitoring, heart rate, and 10 sports modes."
   },
   {
@@ -140,6 +156,7 @@ export const dummyData = [
     name: "Protein Powder",
     image: image16,
     price: 49.99,
+    category: "Beauty",
     description: "Whey protein isolate with 25g protein per serving, vanilla flavor, 2lb container."
   },
   {
@@ -147,6 +164,7 @@ export const dummyData = [
     name: "Desk Lamp",
     image: image17,
     price: 59.95,
+    category: "Home & Kitchen",
     description: "LED desk lamp with dimmable brightness, USB charging port and flexible gooseneck."
   },
   {
@@ -154,6 +172,7 @@ export const dummyData = [
     name: "Tent",
     image: image18,
     price: 129.99,
+    category: "Sports",
     description: "3-season waterproof 2-person camping tent with fiberglass poles and gear loft."
   },
   {
@@ -161,6 +180,7 @@ export const dummyData = [
     name: "Makeup Kit",
     image: image19,
     price: 64.0,
+    category: "Beauty",
     description: "Professional 18-piece makeup kit with eyeshadows, blush, and lipsticks in a case."
   },
   {
@@ -168,6 +188,7 @@ export const dummyData = [
     name: "Backpack",
     image: image21,
     price: 49.5,
+    category: "Fashion",
     description: "Water-resistant 15\" laptop backpack with USB port, anti-theft pocket and padded straps."
   },
   {
@@ -175,6 +196,7 @@ export const dummyData = [
     name: "Sneakers",
     image: image22,
     price: 89.99,
+    category: "Fashion",
     description: "Canvas low-top casual sneakers with cushioned insole and rubber outsole, unisex."
   },
   {
@@ -182,6 +204,7 @@ export const dummyData = [
     name: "All Products",
     image: All,
     price: 0,
+    category: "All Products",
     description: "Browse our entire product catalog and discover everything we have to offer."
   }
 ];

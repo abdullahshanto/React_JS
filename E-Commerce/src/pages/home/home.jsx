@@ -2,11 +2,19 @@
 import hero_img from "../../assets/bg0.gif";
 import { category } from "../../catagory";
 import { dummyData } from "../../dummydata";
+import { useState } from "react";
 import Product from "../../components/product/product";
 import "./home.css";
 
 
 function Home(){
+
+   let[cate,setCate] = useState(dummyData);
+   function filterProducts(category){
+    const updateData = dummyData.filter((item) => item.category === category);
+    setCate(updateData);
+   }
+
   return (
     <div className="home">
 
@@ -14,47 +22,46 @@ function Home(){
       <img src={hero_img} alt="Hero" />
      </div>
 
-     <div className="category-section-wrap">
-    
-       <p className="category-subtitle">Explore our wide range of products</p>
-       <div className="category-section">
-         {
-          category.map((item) => {
-            return (
-              <div className="category-card" key={item.id}>
-                <div className="category-card-img">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="category-card-body">
-                  <h3>{item.name}</h3>
-                  <span className="shop-now">Shop Now &rarr;</span>
-                </div>
-              </div>
-            );
-          })
-        }
-       </div>
-     </div>
-
-      <div className="trending-section">
-        <h2>Trending Products</h2>
-        <p className="subheading">Handpicked for you</p>
-        <div className="product-section">
+      <div className="category-section-wrap">
+        <p className="category-subtitle">Explore our wide range of products</p>
+        <div className="category-section">
           {
-            dummyData.map((item) => {
-              return (
-                <Product 
-                  key={item.id}
-                  name={item.name}
-                  image={item.image}
-                  price={item.price}
-                  id={item.id}
-                />
-              );
-            })
-          }
+           category.map((item) => {
+             return (
+               <div className="category-card" key={item.id} onClick={() => filterProducts(item.name)}>
+                 <div className="category-card-img">
+                   <img src={item.image} alt={item.name} />
+                 </div>
+                 <div className="category-card-body">
+                   <h3>{item.name}</h3>
+                   <span className="shop-now">Shop Now &rarr;</span>
+                 </div>
+               </div>
+             );
+           })
+         }
         </div>
       </div>
+
+       <div className="trending-section">
+         <h2>Trending Products</h2>
+         <p className="subheading">Handpicked for you</p>
+         <div className="product-section">
+           {
+             cate.map((item) => {
+               return (
+                 <Product 
+                   key={item.id}
+                   name={item.name}
+                   image={item.image}
+                   price={item.price}
+                   id={item.id}
+                 />
+               );
+             })
+           }
+         </div>
+       </div>
 
 
 

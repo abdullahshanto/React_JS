@@ -32,13 +32,12 @@ function Nav() {
         </div>
       </div>
 
-      <nav className="bottom-nav" aria-label="Secondary navigation">
-        <a href="#new">New In</a>
-        <a href="#deals">Deals</a>
-        <a href="#fashion">Fashion</a>
-        <a href="#tech">Tech</a>
-        <a href="#home">Home</a>
-      </nav>
+        <nav className="bottom-nav" aria-label="Secondary navigation">
+          <a href="#fashion">Home</a>
+          <a href="#deals">Shop</a>
+          <a href="#home">Cart</a>
+          <a href="#new">Contact</a>
+        </nav>
     </header>
   );
 }

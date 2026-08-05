@@ -1,11 +1,22 @@
+import { useState } from "react";
 import { FaTrash, FaMinus, FaPlus } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/cartcontext";
 import emptyCartImg from "../../assets/emptycart.png";
 import "./cart.css";
 
 function Cart() {
-  const { cartItems, removeFromCart, updateQuantity, clearCart, getTotalPrice } = useCart();
+  const { cartItems, removeFromCart, updateQuantity, clearCart, getTotalPrice, getTotalItems } = useCart();
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCheckout = async () => {
+    setIsCheckingOut(true);
+    // Simulate order processing
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    clearCart();
+    navigate("/contact");
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -51,12 +62,22 @@ function Cart() {
         ))}
       </div>
       <div className="cart-summary">
+        <div className="cart-total">
+          <span>Items ({getTotalItems()}):</span>
+          <span>${getTotalPrice().toFixed(2)}</span>
+        </div>
         <h3>Total: ${getTotalPrice().toFixed(2)}</h3>
         <div className="cart-actions">
           <button className="clear-btn" onClick={clearCart}>
             Clear Cart
           </button>
-          <button className="checkout-btn">Proceed to Checkout</button>
+          <button 
+            className="checkout-btn"
+            onClick={handleCheckout}
+            disabled={isCheckingOut}
+          >
+            {isCheckingOut ? "Processing..." : "Proceed to Checkout"}
+          </button>
         </div>
         <Link to="/shop" className="continue-shopping">
           Continue Shopping

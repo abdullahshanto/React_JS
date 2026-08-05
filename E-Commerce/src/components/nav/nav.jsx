@@ -1,5 +1,6 @@
 import { FaShopify, FaShoppingCart } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import "./nav.css";
 
 function Nav() {
@@ -22,9 +23,9 @@ function Nav() {
         </form>
 
         <div className="nav-actions">
-          <a className="nav-link" href="#categories">
+          <Link to="/shop" className="nav-link">
             Categories
-          </a>
+          </Link>
           <div className="cart-box">
             <FaShoppingCart />
             <span>0</span>
@@ -33,10 +34,10 @@ function Nav() {
       </div>
 
         <nav className="bottom-nav" aria-label="Secondary navigation">
-          <a href="#fashion">Home</a>
-          <a href="#deals">Shop</a>
-          <a href="#home">Cart</a>
-          <a href="#new">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">Cart</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
     </header>
   );

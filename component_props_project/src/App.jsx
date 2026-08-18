@@ -108,4 +108,28 @@ function App(){
 
   return(
      
-  
+    <div className="parent">
+
+        {jobOpenings.map(function(elements, index) {
+            return (
+              <Cards 
+                key={index}
+                company={elements.companyName} 
+                datePosted={elements.datePosted} 
+                post={elements.post}
+                tag1={elements.tag1} 
+                tag2={elements.tag2} 
+                pay={elements.pay} 
+                location={elements.location}
+                brandLogo={elements.brandLogo}
+              />
+            )
+        })}
+
+    </div>
+
+  );
+
+
+}
+export default App;

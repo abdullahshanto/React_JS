@@ -1,6 +1,8 @@
 import { useRef } from "react";
 
-
+function UncontrolledForm() {
+const nameRef = useRef();
+const emailRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault()
